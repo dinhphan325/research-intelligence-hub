@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: pip install requests
       - name: Update publications
-        run: python scripts/update_papers.py
+        run: python scripts/update.py
       - name: Save updated data
         run: |
           git config user.name "github-actions[bot]"
