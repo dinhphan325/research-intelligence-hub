@@ -1,0 +1,229 @@
+{
+  "updated_at": "2026-11-23T08:44:04+00:00",
+  "sources": [
+    {
+      "source_id": "arc",
+      "name": "Australian Research Council",
+      "method": "official_html",
+      "checked_at": "2026-11-23T08:44:04+00:00",
+      "status": "error; existing data preserved",
+      "detail": "The read operation timed out"
+    },
+    {
+      "source_id": "grantconnect",
+      "name": "GrantConnect",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "afaanz",
+      "name": "AFAANZ Research Fund",
+      "method": "official_html",
+      "checked_at": "2026-11-23T08:44:04+00:00",
+      "status": "parsed",
+      "detail": "Explicit published date 2026-04-14; no future round inferred"
+    },
+    {
+      "source_id": "rmit",
+      "name": "RMIT Research Funding",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "latrobe",
+      "name": "La Trobe Research Funding and Partnerships",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "unimelb",
+      "name": "University of Melbourne Research Funding",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "monash",
+      "name": "Monash Research Funding",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "unsw",
+      "name": "UNSW Research",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "sydney",
+      "name": "University of Sydney Research",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "anu",
+      "name": "ANU Research",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "rba",
+      "name": "Reserve Bank of Australia",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "asic",
+      "name": "ASIC",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "aea",
+      "name": "American Economic Association",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "afa",
+      "name": "American Finance Association",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "efa",
+      "name": "European Finance Association",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "nsf",
+      "name": "NSF Economics",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "grantsgov",
+      "name": "Grants.gov",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "erc",
+      "name": "European Research Council",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "ukri",
+      "name": "UKRI / ESRC",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "horizon",
+      "name": "Horizon Europe",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "sloan",
+      "name": "Alfred P. Sloan Foundation",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "sage",
+      "name": "Russell Sage Foundation",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "inet",
+      "name": "Institute for New Economic Thinking",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "bis",
+      "name": "Bank for International Settlements",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "imf",
+      "name": "International Monetary Fund",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "worldbank",
+      "name": "World Bank",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "mas",
+      "name": "Monetary Authority of Singapore",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    },
+    {
+      "source_id": "nber",
+      "name": "National Bureau of Economic Research",
+      "method": "manual_review",
+      "checked_at": null,
+      "status": "manual review required",
+      "detail": ""
+    }
+  ]
+}

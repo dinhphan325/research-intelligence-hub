@@ -1,7 +1,91 @@
 {
- "schema_version":3,"updated_at":"2026-11-23T00:00:00Z","notice":"Officially sourced historical or indicative dates; verify current guidelines before applying. Source registry entries are NOT grant calls.","grants":[
- {"id":"arc-dp28","title":"Discovery Projects 2028","funder":"Australian Research Council","source_id":"arc","region":"Australia","discipline":"Interdisciplinary","topics":["Corporate Finance","Cyber Risk","ESG","Trade Credit","Economics"],"deadline":"2027-05-11","opens":"2027-02-01","deadline_status":"Official indicative calendar","verification_status":"Official calendar checked","verified_at":"2026-11-23","url":"https://www.arc.gov.au/funding-research/scheme-calendar","eligibility":"Eligible administering organisation and scheme-specific CI limits; RMIT internal deadline unverified","eligibility_status":"Needs institutional review","herdc_status":"Potential Category 1 — institutional verification required","type":"Project grant","amount":"Consult scheme guidelines","summary":"Future ARC Discovery Projects round; application dates indicative and subject to change.","data_access":"Not specified","score":98},
- {"id":"arc-itrp27","title":"Industrial Transformation Research Program 2027","funder":"Australian Research Council","source_id":"arc","region":"Australia","discipline":"Interdisciplinary","topics":["Cyber Risk","Corporate Finance","AI","Industry Collaboration"],"deadline":"2026-11-25","opens":"2026-09-16","deadline_status":"Official indicative calendar","verification_status":"Official calendar checked","verified_at":"2026-11-23","url":"https://www.arc.gov.au/funding-research/scheme-calendar","eligibility":"Industry and university partner conditions; verify scheme and RMIT internal closing dates","eligibility_status":"Partner required / review","herdc_status":"Potential Category 1 — institutional verification required","type":"Collaborative grant","amount":"Consult scheme guidelines","summary":"Industry-linked ARC program; short remaining lead time as of 23 November 2026.","data_access":"Potential industry collaboration; not guaranteed","score":91},
- {"id":"afaanz-2026","title":"AFAANZ Research Fund 2026–27 (closed round)","funder":"AFAANZ","source_id":"afaanz","region":"Australia/NZ","discipline":"Finance / Accounting","topics":["Corporate Finance","Accounting","ESG","Trade Credit"],"deadline":"2026-04-14","deadline_status":"Official published closing date — closed","verification_status":"Official funding page checked","verified_at":"2026-11-23","url":"https://www.afaanz.org/afaanz-research-grants","eligibility":"At least 0.8 FTE academic appointment at institutional member and individual AFAANZ membership; check full conditions","eligibility_status":"Membership and appointment check required","herdc_status":"Not determined — institutional verification required","type":"Seed/project grant","amount":"See official call","summary":"Closed 2026 round retained as a monitoring reference; no 2027 deadline inferred.","data_access":"Not specified","score":94}
- ]
+  "schema_version": 3,
+  "updated_at": "2026-11-23T08:44:04+00:00",
+  "notice": "Officially sourced historical or indicative dates; verify current guidelines before applying. Source registry entries are NOT grant calls.",
+  "grants": [
+    {
+      "id": "arc-dp28",
+      "title": "Discovery Projects 2028",
+      "funder": "Australian Research Council",
+      "source_id": "arc",
+      "region": "Australia",
+      "discipline": "Interdisciplinary",
+      "topics": [
+        "Corporate Finance",
+        "Cyber Risk",
+        "ESG",
+        "Trade Credit",
+        "Economics"
+      ],
+      "deadline": "2027-05-11",
+      "opens": "2027-02-01",
+      "deadline_status": "Official indicative calendar",
+      "verification_status": "Official calendar checked",
+      "verified_at": "2026-11-23",
+      "url": "https://www.arc.gov.au/funding-research/scheme-calendar",
+      "eligibility": "Eligible administering organisation and scheme-specific CI limits; RMIT internal deadline unverified",
+      "eligibility_status": "Needs institutional review",
+      "herdc_status": "Potential Category 1 — institutional verification required",
+      "type": "Project grant",
+      "amount": "Consult scheme guidelines",
+      "summary": "Future ARC Discovery Projects round; application dates indicative and subject to change.",
+      "data_access": "Not specified",
+      "score": 98
+    },
+    {
+      "id": "arc-itrp27",
+      "title": "Industrial Transformation Research Program 2027",
+      "funder": "Australian Research Council",
+      "source_id": "arc",
+      "region": "Australia",
+      "discipline": "Interdisciplinary",
+      "topics": [
+        "Cyber Risk",
+        "Corporate Finance",
+        "AI",
+        "Industry Collaboration"
+      ],
+      "deadline": "2026-11-25",
+      "opens": "2026-09-16",
+      "deadline_status": "Official indicative calendar",
+      "verification_status": "Official calendar checked",
+      "verified_at": "2026-11-23",
+      "url": "https://www.arc.gov.au/funding-research/scheme-calendar",
+      "eligibility": "Industry and university partner conditions; verify scheme and RMIT internal closing dates",
+      "eligibility_status": "Partner required / review",
+      "herdc_status": "Potential Category 1 — institutional verification required",
+      "type": "Collaborative grant",
+      "amount": "Consult scheme guidelines",
+      "summary": "Industry-linked ARC program; short remaining lead time as of 23 November 2026.",
+      "data_access": "Potential industry collaboration; not guaranteed",
+      "score": 91
+    },
+    {
+      "id": "afaanz-2026",
+      "title": "AFAANZ Research Fund 2026–27 (closed round)",
+      "funder": "AFAANZ",
+      "source_id": "afaanz",
+      "region": "Australia/NZ",
+      "discipline": "Finance / Accounting",
+      "topics": [
+        "Corporate Finance",
+        "Accounting",
+        "ESG",
+        "Trade Credit"
+      ],
+      "deadline": "2026-04-14",
+      "deadline_status": "Official published closing date — closed",
+      "verification_status": "Official funding page checked",
+      "verified_at": "2026-11-23",
+      "url": "https://www.afaanz.org/afaanz-research-grants",
+      "eligibility": "At least 0.8 FTE academic appointment at institutional member and individual AFAANZ membership; check full conditions",
+      "eligibility_status": "Membership and appointment check required",
+      "herdc_status": "Not determined — institutional verification required",
+      "type": "Seed/project grant",
+      "amount": "See official call",
+      "summary": "Closed 2026 round retained as a monitoring reference; no 2027 deadline inferred.",
+      "data_access": "Not specified",
+      "score": 94
+    }
+  ]
 }
