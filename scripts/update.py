@@ -19,11 +19,24 @@ def get_source(name):
     if len(exact)!=1:raise ValueError('Ambiguous or missing OpenAlex journal: '+name)
     return exact[0]
 
-TOPICS={'Cyber Risk':['cyber','cybersecurity','data breach','information security','ransomware'], 'Corporate Finance':['corporate finance','capital structure','debt maturity','cost of debt','financial constraints','financing','liquidity'], 'ESG':['esg','climate','sustainability','environmental risk','carbon'], 'Trade Credit':['trade credit','supplier financing','accounts payable','supply chain finance'], 'Derivatives':['derivative','hedging','risk management','futures'], 'AI':['artificial intelligence','machine learning','automation','digital transformation']}
+TOPICS={
+ 'Cyber Risk':['cyber','cybersecurity','data breach','information security','ransomware','privacy','digital security'],
+ 'Corporate Finance':['corporate finance','capital structure','debt maturity','cost of debt','financial constraints','financing','liquidity','investment','capital allocation','leverage','bond','credit risk'],
+ 'ESG':['esg','climate','sustainability','environmental risk','carbon','transition risk','corporate social responsibility'],
+ 'Trade Credit':['trade credit','supplier financing','accounts payable','supply chain finance','supplier credit'],
+ 'Derivatives':['derivative','hedging','risk management','futures','options','volatility','tail risk'],
+ 'AI':['artificial intelligence','machine learning','automation','digital transformation','algorithmic','large language model'],
+ 'Interdisciplinary':['corporate governance','information asymmetry','innovation','firm performance','regulation','policy uncertainty','economic shocks','intangible capital']}
 def score(text):
-    s=text.lower(); hits={k:sum(1 for w in words if w in s) for k,words in TOPICS.items()}
+    s=text.lower()
+    hits={k:sum(1 for w in words if w in s) for k,words in TOPICS.items()}
     matched=[k for k,v in hits.items() if v]
-    return min(100, 35+min(55,sum(hits.values())*13)+min(10,max(0,len(matched)-1)*5)),matched
+    if not matched:return 15,[]
+    primary=sum(hits[k] for k in matched if k!='Interdisciplinary')
+    interdisciplinary=len([k for k in matched if k!='Interdisciplinary'])
+    # Explicit, interpretable heuristic. A score >=80 requires multiple signals.
+    value=35+min(40,primary*14)+min(15,max(0,interdisciplinary-1)*8)+min(10,hits['Interdisciplinary']*5)
+    return min(100,value),matched
 
 def abstract(inv):
     if not inv:return ''
@@ -39,6 +52,9 @@ def main():
     errors=[]; success=0
     since=(date.today()-timedelta(days=100)).isoformat()
     for j in cfg['journals']:
+        # Monitor only journals confirmed A* when an official rating exists.
+        if j.get('abdc_verified') and j.get('abdc_2025_rating') != 'A*':
+            continue
         try:
             src=get_source(j['name']); sid=src['id'].split('/')[-1]
             params={'filter':f'primary_location.source.id:{sid},from_publication_date:{since},type:article', 'sort':'publication_date:desc','per_page':100}
@@ -52,7 +68,7 @@ def main():
                 if not title:continue
                 abs_text=abstract(w.get('abstract_inverted_index'))
                 sc,topics=score(title+' '+abs_text)
-                byid[uid]={'id':uid,'title':title,'journal':j['name'],'discipline':j['discipline'],'date':w.get('publication_date') or '', 'authors':', '.join(a.get('author',{}).get('display_name','') for a in w.get('authorships',[])[:8]),'doi':doi or '', 'url':doi or w.get('id') or '', 'abstract':abs_text,'score':sc,'topics':topics,'ranking_status':'ABDC A* not yet independently verified','ranking_edition':None,'source':'OpenAlex','source_id':sid}
+                byid[uid]={'id':uid,'title':title,'journal':j['name'],'discipline':j['discipline'],'date':w.get('publication_date') or '', 'authors':', '.join(a.get('author',{}).get('display_name','') for a in w.get('authorships',[])[:8]),'doi':doi or '', 'url':doi or w.get('id') or '', 'abstract':abs_text,'score':sc,'topics':topics,'ranking_status':('ABDC 2025 A* verified' if j.get('abdc_verified') and j.get('abdc_2025_rating')=='A*' else 'ABDC A* unverified'),'ranking_edition':('2025' if j.get('abdc_verified') else None),'source':'OpenAlex','source_id':sid}
             success+=1
         except Exception as exc:errors.append(f"{j['name']}: {str(exc)[:180]}")
         time.sleep(.12)
@@ -61,7 +77,7 @@ def main():
         print('\n'.join(errors),file=sys.stderr)
         sys.exit(1)
     rows=sorted(byid.values(),key=lambda x:x.get('date',''),reverse=True)[:1500]
-    output={'updated_at':datetime.now(timezone.utc).isoformat(),'papers':rows,'journal_queries_succeeded':success,'journal_queries_total':len(cfg['journals']),'errors':errors,'note':'Journal list is provisional; ABDC A* verification pending. Relevance is keyword-based, not AI.'}
+    output={'updated_at':datetime.now(timezone.utc).isoformat(),'papers':rows,'journal_queries_succeeded':success,'journal_queries_total':len(cfg['journals']),'errors':errors,'note':'ABDC 2025 verification is per journal, based on official workbook if supplied. Relevance is heuristic, not AI.'}
     (DATA/'papers.json').write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n')
     print(f'Saved {len(rows)} publications from {success}/{len(cfg["journals"])} journal queries. Errors: {len(errors)}')
     if errors:print('\n'.join(errors),file=sys.stderr)
