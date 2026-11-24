@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-11-23T08:44:04+00:00",
+  "updated_at": "2026-11-24T04:39:31+00:00",
   "notice": "Officially sourced historical or indicative dates; verify current guidelines before applying. Source registry entries are NOT grant calls.",
   "grants": [
     {
@@ -76,7 +76,7 @@
       "deadline": "2026-04-14",
       "deadline_status": "Official published closing date — closed",
       "verification_status": "Official funding page checked",
-      "verified_at": "2026-11-23",
+      "verified_at": "2026-11-24",
       "url": "https://www.afaanz.org/afaanz-research-grants",
       "eligibility": "At least 0.8 FTE academic appointment at institutional member and individual AFAANZ membership; check full conditions",
       "eligibility_status": "Membership and appointment check required",
