@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-26T04:40:51+00:00",
+  "updated_at": "2026-11-27T04:39:51+00:00",
   "sources": [
     {
       "source_id": "arc",
       "name": "Australian Research Council",
       "method": "official_html",
-      "checked_at": "2026-11-26T04:40:51+00:00",
+      "checked_at": "2026-11-27T04:39:51+00:00",
       "status": "error; existing data preserved",
       "detail": "The read operation timed out"
     },
@@ -21,7 +21,7 @@
       "source_id": "afaanz",
       "name": "AFAANZ Research Fund",
       "method": "official_html",
-      "checked_at": "2026-11-26T04:40:51+00:00",
+      "checked_at": "2026-11-27T04:39:51+00:00",
       "status": "parsed",
       "detail": "Explicit published date 2026-04-14; no future round inferred"
     },
